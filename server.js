@@ -36,7 +36,9 @@ mqttClient.on('message', (topic, message) => {
         timestamp: new Date().toISOString(),
     };
 });
-
+app.get("/",(req,res)=>{
+    res.send("Welcome to api")
+})
 app.post('/stats', (req, res) => {
     const data = req.body;
 
